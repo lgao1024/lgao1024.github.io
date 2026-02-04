@@ -99,11 +99,11 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "Apple",
-        href: "https://apple.com"
+        title: "NJU",
+        href: "https://www.nju.edu.cn/"
     },
     {
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "Yuangroup",
+        href: "https://www.x-mol.com/groups/yuangroup/publications"
     }
 ]
