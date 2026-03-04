@@ -1,104 +1,36 @@
-<!-- Footer -->
+﻿<!-- Footer -->
 <footer>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    {% if site.RSS %}
-                    <li>
-                        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    <!-- Jianshu link (open in a new tab) -->
-                    {% if site.jianshu_username %}
-                            <li>
-                                <a target="_blank" href="https://www.jianshu.com/u/{{ site.jianshu_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa  fa-stack-1x fa-inverse">简</i>
-                                    </span>
-                                </a>
-                            </li>
-                    {% endif %}
-                    {% if site.twitter_username %}
-                    <li>
-                        <a href="https://twitter.com/{{ site.twitter_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
+        <div class="footer-card">
+            <div class="footer-col footer-col-left">
+                <p class="footer-title">Copyright</p>
+                <p class="footer-text">&copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
+            </div>
 
-                    <!-- Weibo / Zhihu links (open in a new tab) -->
-                    {% if site.zhihu_username %}
-                    <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">&#30693;</i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.weibo_username %}
-                    <li>
-                        <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-
-
-                    {% if site.facebook_username %}
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
+            <div class="footer-col footer-col-center">
+                <p class="footer-title">Contact</p>
+                <div class="footer-contact-list">
+                    {% if site.email %}
+                    <a class="footer-contact-dot" href="mailto:{{ site.email }}" aria-label="Email">E</a>
                     {% endif %}
                     {% if site.github_username %}
-                    <li>
-                        <a target="_blank" href="https://github.com/{{ site.github_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
+                    <a class="footer-contact-dot" target="_blank" href="https://github.com/{{ site.github_username }}" aria-label="GitHub">G</a>
                     {% endif %}
-                    {% if site.linkedin_username %}
-                    <li>
-                        <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
+                    {% if site.zhihu_username %}
+                    <a class="footer-contact-dot" target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}" aria-label="Zhihu">Z</a>
                     {% endif %}
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
-                    <br>
-                    Theme on <a href="{{ site.github_repo }}">GitHub</a> |
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user={{ site.github_username }}&repo={{ site.github_username }}.github.io&type=star&count=true" >
-                    </iframe>
+                </div>
+            </div>
+
+            <div class="footer-col footer-col-right">
+                <p class="footer-title">Built With</p>
+                <p class="footer-text">
+                    <a target="_blank" href="https://jekyllrb.com/">Jekyll</a> /
+                    <a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
+                </p>
+                <p class="footer-text">
+                    Theme:
+                    <a target="_blank" href="{{ site.github_repo }}">Lei Blog</a>
                 </p>
             </div>
         </div>
