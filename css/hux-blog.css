@@ -1169,9 +1169,6 @@ a:focus {
 /* Home hub layout */
 .home-hub .postlist-container {
   padding-top: 34px;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .home-section {
   margin-bottom: 30px;
@@ -1239,9 +1236,6 @@ a:focus {
 /* About page blocks */
 .about-hub .postlist-container {
   padding-top: 34px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .about-block {
   border: 1px solid #d8dee5;
@@ -1310,7 +1304,40 @@ a:focus {
 
 .home-hub .navbar-custom .container,
 .about-hub .navbar-custom .container {
-  max-width: 1200px;
+  max-width: 1040px;
+  padding-left: 24px;
+  padding-right: 24px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.home-hub .postlist-container,
+.about-hub .postlist-container {
+  max-width: 1040px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-hub .navbar-custom .navbar-right,
+.about-hub .navbar-custom .navbar-right {
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-hub .navbar-custom .navbar-header,
+  .about-hub .navbar-custom .navbar-header {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .home-hub .navbar-custom .container,
+  .about-hub .navbar-custom .container,
+  .home-hub .postlist-container,
+  .about-hub .postlist-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
