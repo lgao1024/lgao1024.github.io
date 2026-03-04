@@ -1185,17 +1185,20 @@ a:focus {
 }
 .home-tag {
   display: inline-block;
-  border: 1px solid #cfd7df;
+  border: 1px solid #1f6fa7;
   border-radius: 999px;
   padding: 5px 13px;
   font-size: 16px;
-  color: #244e73;
+  color: #1f6fa7;
+  background: transparent;
   text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
 }
 .home-tag:hover,
 .home-tag:focus {
-  border-color: #244e73;
-  background: #f3f7fb;
+  border-color: #1a5f8f;
+  background: #1f6fa7;
+  color: #fff;
   text-decoration: none;
 }
 .home-post-list {
@@ -1252,18 +1255,21 @@ a:focus {
 }
 .home-post-tag {
   display: inline-block;
+  border: 1px solid #1f6fa7;
   border-radius: 999px;
   padding: 4px 12px;
-  background: #1f6fa7;
-  color: #fff;
+  background: transparent;
+  color: #1f6fa7;
   font-size: 14px;
   line-height: 1.5;
   text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
 }
 .home-post-tag:hover,
 .home-post-tag:focus {
   color: #fff;
-  background: #1a5f8f;
+  border-color: #1a5f8f;
+  background: #1f6fa7;
   text-decoration: none;
 }
 
