@@ -1129,6 +1129,17 @@ a:focus {
   z-index: 1000;
   background: #fff;
   border-bottom: 1px solid #e6e6e6;
+  transition: transform 220ms ease;
+}
+.header-minimal .navbar-custom.is-fixed,
+.header-minimal .navbar-custom.is-visible {
+  top: 0;
+  transform: none;
+}
+@media only screen and (min-width: 768px) {
+  .header-minimal .navbar-custom.nav-slide-hidden {
+    transform: translateY(-100%);
+  }
 }
 .header-minimal .navbar-custom .navbar-brand,
 .header-minimal .navbar-custom .nav li a {
@@ -1174,12 +1185,16 @@ a:focus {
 .home-hub .postlist-container {
   padding-top: 34px;
 }
+.header-minimal.home-hub,
+.header-minimal.about-hub {
+  padding-top: 72px;
+}
 .home-section {
   margin-bottom: 30px;
 }
 .home-time-group {
   margin-bottom: 26px;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 92px;
 }
 .home-time-title {
   margin: 0 0 12px;
@@ -1190,7 +1205,10 @@ a:focus {
   font-size: 28px;
   margin: 0 0 16px;
   line-height: 1.15;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 92px;
+}
+.header-minimal.home-hub [data-spy-section] {
+  scroll-margin-top: 92px;
 }
 .home-tag-list {
   display: flex;
@@ -1231,7 +1249,7 @@ a:focus {
 }
 .hub-side-nav {
   position: sticky;
-  top: 86px;
+  top: 98px;
 }
 .hub-side-title {
   margin: 0 0 8px;
@@ -1512,10 +1530,6 @@ a:focus {
   background: #1f6fa7;
   font-weight: 800;
   box-shadow: inset 0 -2px 0 #174f77;
-}
-
-.header-minimal .intro-header.intro-header--minimal {
-  margin-top: 72px;
 }
 
 @media only screen and (min-width: 768px) {

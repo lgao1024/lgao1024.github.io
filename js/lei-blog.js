@@ -44,7 +44,26 @@ $(document).ready(function() {
 // Navigation script: keep navbar pinned on top and only handle side catalog position
 jQuery(document).ready(function($) {
     var MQL = 1170;
-    $('.navbar-custom').addClass('is-fixed is-visible');
+    var $navbar = $('.header-minimal .navbar-custom');
+    $navbar.addClass('is-fixed');
+
+    // On desktop, hide navbar when scrolling up, show when scrolling down.
+    if ($navbar.length && $(window).width() >= 768) {
+        var lastTop = $(window).scrollTop();
+        $(window).on('scroll', function() {
+            var currentTop = $(window).scrollTop();
+
+            if (Math.abs(currentTop - lastTop) < 2) return;
+
+            if (currentTop <= 0 || currentTop > lastTop) {
+                $navbar.removeClass('nav-slide-hidden');
+            } else {
+                $navbar.addClass('nav-slide-hidden');
+            }
+
+            lastTop = currentTop;
+        });
+    }
 
     // keep side catalog behavior on large screens
     if ($(window).width() > MQL) {
