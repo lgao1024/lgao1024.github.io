@@ -1089,3 +1089,79 @@ img::-moz-selection {
 .page-fullscreen footer .copyright a:hover {
   color: #ddd;
 }
+
+/* Traditional academic homepage overrides */
+body {
+  background: #fff;
+  color: #222;
+  font-family: Georgia, "Times New Roman", "Songti SC", "STSong", "SimSun", serif;
+  line-height: 1.8;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1f1f1f;
+  font-family: Georgia, "Times New Roman", "Songti SC", "STSong", "SimSun", serif;
+  font-weight: 700;
+}
+a {
+  color: #1f4e79;
+}
+a:hover,
+a:focus {
+  color: #163a5b;
+}
+.post-content-preview {
+  color: #5f6368;
+  font-style: normal;
+}
+.post-preview > .post-meta {
+  color: #666;
+}
+.header-minimal .navbar-custom {
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+.header-minimal .navbar-custom .navbar-brand,
+.header-minimal .navbar-custom .nav li a {
+  color: #1f1f1f;
+}
+.header-minimal .navbar-custom .navbar-brand:hover,
+.header-minimal .navbar-custom .navbar-brand:focus,
+.header-minimal .navbar-custom .nav li a:hover,
+.header-minimal .navbar-custom .nav li a:focus {
+  color: #1f4e79;
+}
+.header-minimal .navbar-default .navbar-toggle .icon-bar {
+  background-color: #1f1f1f;
+}
+.header-minimal .intro-header.intro-header--minimal {
+  background: #fff;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ececec;
+}
+.header-minimal .intro-header.intro-header--minimal .site-heading {
+  color: #1f1f1f;
+  padding: 40px 0 26px;
+}
+.header-minimal .intro-header.intro-header--minimal .site-heading h1 {
+  font-size: 44px;
+  letter-spacing: 0.3px;
+}
+.header-minimal .intro-header.intro-header--minimal .site-heading .subheading {
+  color: #4a4a4a;
+  font-size: 22px;
+  font-weight: 400;
+}
+@media only screen and (min-width: 768px) {
+  .header-minimal .intro-header.intro-header--minimal .site-heading {
+    padding: 58px 0 40px;
+  }
+  .header-minimal .intro-header.intro-header--minimal .site-heading h1 {
+    font-size: 58px;
+  }
+}
