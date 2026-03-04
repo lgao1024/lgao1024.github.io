@@ -4,7 +4,7 @@
 {% include head.html %}
 
 <!-- hack iOS CSS :active style -->
-<body ontouchstart="" class="{% if page.header-style == 'minimal' %}header-minimal{% endif %}{% if page.body-class %} {{ page.body-class }}{% endif %}">
+<body ontouchstart="" class="{% if page.header-style == 'minimal' or page.layout == 'post' %}header-minimal{% endif %}{% if page.body-class %} {{ page.body-class }}{% elsif page.layout == 'post' %} home-hub{% endif %}">
 
     {% include nav.html %}
 

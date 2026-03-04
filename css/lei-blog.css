@@ -1379,6 +1379,31 @@ a:focus {
   background: rgba(138, 92, 153, 0.1);
   transform: translateY(1px);
 }
+.post-detail-section .postlist-container {
+  margin-bottom: 0;
+}
+.post-detail-card {
+  cursor: default;
+}
+.post-detail-card:hover,
+.post-detail-card:focus,
+.post-detail-card:active {
+  transform: none;
+}
+.post-detail-title {
+  font-size: 34px;
+  line-height: 1.2;
+  color: #1f1f1f;
+}
+.post-detail-content {
+  margin-top: 18px;
+}
+.post-detail-content p {
+  margin: 18px 0;
+}
+.post-detail-content .pager {
+  margin-top: 28px;
+}
 .home-post-head {
   display: flex;
   justify-content: space-between;
