@@ -47,7 +47,9 @@ jQuery(document).ready(function($) {
     var $navbar = $('.header-minimal .navbar-custom');
     $navbar.addClass('is-fixed');
 
-    // On desktop, hide navbar when scrolling up, show when scrolling down.
+    // On desktop:
+    // content moves up (scroll down) -> hide navbar
+    // content moves down (scroll up) -> show navbar
     if ($navbar.length && $(window).width() >= 768) {
         var lastTop = $(window).scrollTop();
         $(window).on('scroll', function() {
@@ -55,7 +57,7 @@ jQuery(document).ready(function($) {
 
             if (Math.abs(currentTop - lastTop) < 2) return;
 
-            if (currentTop <= 0 || currentTop > lastTop) {
+            if (currentTop <= 0 || currentTop < lastTop) {
                 $navbar.removeClass('nav-slide-hidden');
             } else {
                 $navbar.addClass('nav-slide-hidden');

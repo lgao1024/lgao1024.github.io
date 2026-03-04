@@ -1187,14 +1187,14 @@ a:focus {
 }
 .header-minimal.home-hub,
 .header-minimal.about-hub {
-  padding-top: 72px;
+  padding-top: 64px;
 }
 .home-section {
   margin-bottom: 30px;
 }
 .home-time-group {
   margin-bottom: 26px;
-  scroll-margin-top: 92px;
+  scroll-margin-top: 84px;
 }
 .home-time-title {
   margin: 0 0 12px;
@@ -1205,10 +1205,10 @@ a:focus {
   font-size: 28px;
   margin: 0 0 16px;
   line-height: 1.15;
-  scroll-margin-top: 92px;
+  scroll-margin-top: 84px;
 }
 .header-minimal.home-hub [data-spy-section] {
-  scroll-margin-top: 92px;
+  scroll-margin-top: 84px;
 }
 .home-tag-list {
   display: flex;
@@ -1249,7 +1249,7 @@ a:focus {
 }
 .hub-side-nav {
   position: sticky;
-  top: 98px;
+  top: 90px;
 }
 .hub-side-title {
   margin: 0 0 8px;
@@ -1458,17 +1458,17 @@ a:focus {
 .home-hub .navbar-custom .navbar-brand,
 .about-hub .navbar-custom .navbar-brand {
   font-size: 22px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .home-hub .navbar-custom .nav li a,
 .about-hub .navbar-custom .nav li a {
   font-size: 16px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-radius: 0;
-  font-weight: 700;
+  font-weight: 800;
   transition: color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
 }
 
