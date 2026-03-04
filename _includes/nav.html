@@ -1,4 +1,5 @@
 <!-- Navigation -->
+{% assign current_url = page.url | replace:'index.html','' %}
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,14 +17,15 @@
         <div id="huxblog_navbar">
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                    <li class="{% if current_url == '/' %}active{% endif %}">
                         <a href="{{ site.baseurl }}/">Home</a>
                     </li>
-                    <li>
+                    <li class="{% if current_url == '/tags/' %}active{% endif %}">
                         <a href="{{ site.baseurl }}/tags/">Tags</a>
                     </li>
                     {% for page in site.pages %}{% if page.title and page.nav_exclude != true %}
-                    <li>
+                    {% assign nav_url = page.url | replace:'index.html','' %}
+                    <li class="{% if current_url == nav_url %}active{% endif %}">
                         <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                     </li>
                     {% endif %}{% endfor %}

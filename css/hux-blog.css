@@ -1445,6 +1445,8 @@ a:focus {
   font-size: 16px;
   padding-top: 16px;
   padding-bottom: 16px;
+  border-radius: 8px;
+  transition: color 160ms ease, background-color 160ms ease;
 }
 
 .home-hub .navbar-custom .container,
@@ -1481,6 +1483,26 @@ a:focus {
 .home-hub .navbar-custom .navbar-right,
 .about-hub .navbar-custom .navbar-right {
   margin-right: 0;
+}
+
+.header-minimal .navbar-custom .nav li a:hover,
+.header-minimal .navbar-custom .nav li a:focus {
+  color: #0f4f82;
+  background: rgba(31, 111, 167, 0.12);
+}
+
+.header-minimal .navbar-custom .nav li.active > a,
+.header-minimal .navbar-custom .nav li.active > a:hover,
+.header-minimal .navbar-custom .nav li.active > a:focus {
+  color: #0f4f82;
+  background: rgba(31, 111, 167, 0.2);
+}
+
+.navbar-custom.is-fixed .nav li.active > a,
+.navbar-custom.is-fixed .nav li.active > a:hover,
+.navbar-custom.is-fixed .nav li.active > a:focus {
+  color: #0f4f82;
+  background: rgba(31, 111, 167, 0.2);
 }
 
 @media only screen and (min-width: 768px) {
