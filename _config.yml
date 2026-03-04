@@ -4,7 +4,7 @@ SEOTitle: Lei's Blog
 header-img: img/post-bg-desk.jpg
 email: lgao1024@outlook.com
 description: "Every failure is leading towards success."
-keyword: "Lei, Lei's Blog, 楂樼鐨勫崥瀹? LeiGao, 楂樼"
+keyword: "Lei, Lei's Blog, LeiGao"
 url: "https://lgao1024.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/lgao1024/lgao1024.github.io.git" # you code repository
@@ -55,22 +55,22 @@ kramdown:
 
 
 
-# 璇勮绯荤粺
-# Disqus锛坔ttps://disqus.com/锛?
+# 鐠囧嫯顔戠化鑽ょ埠
+# Disqus閿涘潝ttps://disqus.com/閿?
 # disqus_username: lgao1024
 
 # Gitalk
 # gitalk:
-#   enable: true    #鏄惁寮€鍚疓italk璇勮
-#   clientID: f2c84e7629bb1446c1a4                            #鐢熸垚鐨刢lientID
-#   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #鐢熸垚鐨刢lientSecret
-#   repo: qiubaiying.github.io    #浠撳簱鍚嶇О
-#   owner: qiubaiying    #github鐢ㄦ埛鍚?
-#   admin: qiubaiying
-#   distractionFreeMode: true #鏄惁鍚敤绫讳技FB鐨勯槾褰遍伄缃?
+#   enable: true    #閺勵垰鎯佸鈧崥鐤搃talk鐠囧嫯顔?
+#   clientID: f2c84e7629bb1446c1a4                            #閻㈢喐鍨氶惃鍒ientID
+#   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #閻㈢喐鍨氶惃鍒ientSecret
+#   repo: lgao1024.github.io    # repository name
+#   owner: lgao1024    # github username
+#   admin: lgao1024
+#   distractionFreeMode: true #閺勵垰鎯侀崥顖滄暏缁鎶€FB閻ㄥ嫰妲捐ぐ閬嶄紕缂?
 
 
-# 缁熻
+# 缂佺喕顓?
 
 # Analytics settings
 # Baidu Analytics
@@ -78,15 +78,15 @@ kramdown:
 
 # Google Analytics
 # ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-# ga_domain: qiubaiying.top               # 榛樿鐨勬槸 auto, 杩欓噷鎴戞槸鑷畾涔変簡鐨勫煙鍚嶏紝浣犲鏋滄病鏈夎嚜宸辩殑鍩熷悕锛岄渶瑕佹敼鎴恆uto
+# ga_domain: lgao1024.github.io          # default: auto, optional custom domain
 
 
 
 
 
 # Featured Tags
-featured-tags: true                     # 鏄惁浣跨敤棣栭〉鏍囩
-featured-condition-size: 0              # 鐩稿悓鏍囩鏁伴噺澶т簬杩欎釜鏁帮紝鎵嶄細鍑虹幇鍦ㄩ椤?
+featured-tags: true                     # 閺勵垰鎯佹担璺ㄦ暏妫ｆ牠銆夐弽鍥╊劮
+featured-condition-size: 0              # 閻╃鎮撻弽鍥╊劮閺佷即鍣烘径褌绨潻娆庨嚋閺佸府绱濋幍宥勭窗閸戣櫣骞囬崷銊╊浕妞?
 
 
 
@@ -101,4 +101,5 @@ friends: [
         href: "https://www.x-mol.com/groups/yuangroup/publications"
     }
 ]
+
 

@@ -82,13 +82,13 @@ layout: default
                 </ul>
 
 
-                <!--Gitalk鐠囧嫯顔憇tart  -->
+                <!-- Gitalk start -->
                 {% if site.gitalk.enable %}
-                <!-- 瀵洖鍙咷italk鐠囧嫯顔戦幓鎺嶆  -->
+                <!-- Gitalk styles and container -->
                 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
                 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
                 <div id="gitalk-container"></div>
-                <!-- 瀵洖鍙嗘稉鈧稉顏嗘晸娴滎湷d5閻ㄥ埊s閿涘瞼鏁ゆ禍搴☆嚠id閸婅壈绻樼悰灞筋槱閻炲棴绱濋梼鍙夘剾閸忔儼绻冮梹?-->
+                <!-- Use MD5 hash for stable issue id -->
                 <!-- Thank DF:https://github.com/NSDingFan/NSDingFan.github.io/issues/3#issuecomment-407496538 -->
                 <script src="{{ site.baseurl }}/js/md5.min.js"></script>
                 <script type="text/javascript">
@@ -107,11 +107,11 @@ layout: default
                 <!-- Gitalk end -->
 
                 {% if site.disqus_username %}
-                <!-- disqus 鐠囧嫯顔戝?start -->
+                <!-- disqus start -->
                 <div class="comment">
                     <div id="disqus_thread" class="disqus-thread"></div>
                 </div>
-                <!-- disqus 鐠囧嫯顔戝?end -->
+                <!-- disqus end -->
                 {% endif %}
 
             </div>  
@@ -173,7 +173,7 @@ layout: default
 
 
 {% if site.disqus_username %}
-<!-- disqus 閸忣剙鍙S娴狅絿鐖?start (娑撯偓娑擃亞缍夋い闈涘涧闂団偓閹绘帒鍙嗘稉鈧▎? -->
+<!-- disqus JS start -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "{{site.disqus_username}}";
@@ -186,7 +186,7 @@ layout: default
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- disqus 閸忣剙鍙S娴狅絿鐖?end -->
+<!-- disqus JS end -->
 {% endif %}
 
 
@@ -205,7 +205,7 @@ layout: default
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
-        // BY Fix:閸樺娅庨弽鍥暯閸撳秶娈戦垾?閳?issues:<https://github.com/qiubaiying/qiubaiying.github.io/issues/137>
+        // Anchor rendering compatibility fix
         // anchors.options = {
         //   visible: 'always',
         //   placement: 'right',
@@ -226,5 +226,6 @@ layout: default
     }
 </style>
 {% endif %}
+
 
 

@@ -1,5 +1,8 @@
 <!-- Navigation -->
-{% assign current_url = page.url | replace:'index.html','' %}
+{% assign current_url = page.url | replace:'index.html','' | replace:'//','/' %}
+{% if current_url == '' %}
+    {% assign current_url = '/' %}
+{% endif %}
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -24,7 +27,10 @@
                         <a href="{{ site.baseurl }}/tags/">Tags</a>
                     </li>
                     {% for page in site.pages %}{% if page.title and page.nav_exclude != true %}
-                    {% assign nav_url = page.url | replace:'index.html','' %}
+                    {% assign nav_url = page.url | replace:'index.html','' | replace:'//','/' %}
+                    {% if nav_url == '' %}
+                        {% assign nav_url = '/' %}
+                    {% endif %}
                     <li class="{% if current_url == nav_url %}active{% endif %}">
                         <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                     </li>
