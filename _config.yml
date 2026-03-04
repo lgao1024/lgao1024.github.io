@@ -4,7 +4,7 @@ SEOTitle: Lei's Blog
 header-img: img/post-bg-desk.jpg
 email: lgao1024@outlook.com
 description: "Every failure is leading towards success."
-keyword: "Lei, Lei's Blog, 高磊的博客, LeiGao, 高磊"
+keyword: "Lei, Lei's Blog, 楂樼鐨勫崥瀹? LeiGao, 楂樼"
 url: "https://lgao1024.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/lgao1024/lgao1024.github.io.git" # you code repository
@@ -55,22 +55,22 @@ kramdown:
 
 
 
-# 评论系统
-# Disqus（https://disqus.com/）
+# 璇勮绯荤粺
+# Disqus锛坔ttps://disqus.com/锛?
 # disqus_username: lgao1024
 
 # Gitalk
 # gitalk:
-#   enable: true    #是否开启Gitalk评论
-#   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-#   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-#   repo: qiubaiying.github.io    #仓库名称
-#   owner: qiubaiying    #github用户名
+#   enable: true    #鏄惁寮€鍚疓italk璇勮
+#   clientID: f2c84e7629bb1446c1a4                            #鐢熸垚鐨刢lientID
+#   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #鐢熸垚鐨刢lientSecret
+#   repo: qiubaiying.github.io    #浠撳簱鍚嶇О
+#   owner: qiubaiying    #github鐢ㄦ埛鍚?
 #   admin: qiubaiying
-#   distractionFreeMode: true #是否启用类似FB的阴影遮罩
+#   distractionFreeMode: true #鏄惁鍚敤绫讳技FB鐨勯槾褰遍伄缃?
 
 
-# 统计
+# 缁熻
 
 # Analytics settings
 # Baidu Analytics
@@ -78,15 +78,15 @@ kramdown:
 
 # Google Analytics
 # ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-# ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+# ga_domain: qiubaiying.top               # 榛樿鐨勬槸 auto, 杩欓噷鎴戞槸鑷畾涔変簡鐨勫煙鍚嶏紝浣犲鏋滄病鏈夎嚜宸辩殑鍩熷悕锛岄渶瑕佹敼鎴恆uto
 
 
 
 
 
 # Featured Tags
-featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
+featured-tags: true                     # 鏄惁浣跨敤棣栭〉鏍囩
+featured-condition-size: 0              # 鐩稿悓鏍囩鏁伴噺澶т簬杩欎釜鏁帮紝鎵嶄細鍑虹幇鍦ㄩ椤?
 
 
 
@@ -101,3 +101,4 @@ friends: [
         href: "https://www.x-mol.com/groups/yuangroup/publications"
     }
 ]
+
