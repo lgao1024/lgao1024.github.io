@@ -1168,26 +1168,30 @@ a:focus {
 
 /* Home hub layout */
 .home-hub .postlist-container {
-  padding-top: 26px;
+  padding-top: 34px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .home-section {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 .home-section-title {
-  font-size: 40px;
-  margin: 0 0 20px;
+  font-size: 28px;
+  margin: 0 0 16px;
+  line-height: 1.15;
 }
 .home-tag-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 9px;
 }
 .home-tag {
   display: inline-block;
   border: 1px solid #cfd7df;
   border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 15px;
+  padding: 5px 13px;
+  font-size: 16px;
   color: #244e73;
   text-decoration: none;
 }
@@ -1200,32 +1204,33 @@ a:focus {
 .home-post-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 .home-post-card {
   border: 1px solid #d8dee5;
   border-radius: 10px;
-  padding: 20px 24px;
+  padding: 20px 22px;
   background: #fff;
 }
 .home-post-title {
-  font-size: 35px;
+  font-size: 22px;
   line-height: 1.25;
-  margin: 0 0 6px;
+  margin: 0 0 4px;
 }
 .home-post-title a {
   color: #1f4e79;
 }
 .home-post-date {
-  margin: 0 0 10px;
+  margin: 0 0 9px;
   color: #666;
-  font-size: 20px;
+  font-size: 16px;
 }
 .home-post-subtitle,
 .home-post-excerpt {
   margin: 0;
   color: #3f4750;
-  font-size: 28px;
+  font-size: 18px;
+  line-height: 1.65;
 }
 .home-post-excerpt {
   margin-top: 8px;
@@ -1233,7 +1238,10 @@ a:focus {
 
 /* About page blocks */
 .about-hub .postlist-container {
-  padding-top: 26px;
+  padding-top: 34px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about-block {
   border: 1px solid #d8dee5;
@@ -1243,7 +1251,7 @@ a:focus {
   background: #fff;
 }
 .about-block h2 {
-  font-size: 30px;
+  font-size: 28px;
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -1263,17 +1271,20 @@ a:focus {
 
 @media only screen and (max-width: 767px) {
   .home-section-title {
-    font-size: 30px;
+    font-size: 24px;
   }
   .home-post-title {
-    font-size: 29px;
+    font-size: 20px;
   }
   .home-post-date {
-    font-size: 18px;
+    font-size: 14px;
+  }
+  .home-tag {
+    font-size: 15px;
   }
   .home-post-subtitle,
   .home-post-excerpt {
-    font-size: 24px;
+    font-size: 16px;
   }
 }
 
@@ -1281,4 +1292,25 @@ a:focus {
 .about-hub .navbar-custom .nav li a {
   text-transform: none;
   letter-spacing: 0;
+}
+
+.home-hub .navbar-custom .navbar-brand,
+.about-hub .navbar-custom .navbar-brand {
+  font-size: 22px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.home-hub .navbar-custom .nav li a,
+.about-hub .navbar-custom .nav li a {
+  font-size: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.home-hub .navbar-custom .container,
+.about-hub .navbar-custom .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
