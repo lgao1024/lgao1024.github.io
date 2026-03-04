@@ -3,32 +3,38 @@
     <div class="container">
         <div class="footer-card">
             <div class="footer-col footer-col-left">
-                <p class="footer-title">Copyright</p>
-                <p class="footer-text">&copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
+                <p class="footer-text footer-text-single">&copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
             </div>
 
             <div class="footer-col footer-col-center">
-                <p class="footer-title">Contact</p>
                 <div class="footer-contact-list">
                     {% if site.email %}
-                    <a class="footer-contact-dot" href="mailto:{{ site.email }}" aria-label="Email">E</a>
+                    <a class="footer-contact-dot" href="mailto:{{ site.email }}" aria-label="Email">
+                        <i class="fa fa-envelope"></i>
+                    </a>
                     {% endif %}
                     {% if site.github_username %}
-                    <a class="footer-contact-dot" target="_blank" href="https://github.com/{{ site.github_username }}" aria-label="GitHub">G</a>
+                    <a class="footer-contact-dot" target="_blank" href="https://github.com/{{ site.github_username }}" aria-label="GitHub">
+                        <i class="fa fa-github"></i>
+                    </a>
                     {% endif %}
                     {% if site.zhihu_username %}
-                    <a class="footer-contact-dot" target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}" aria-label="Zhihu">Z</a>
+                    <a class="footer-contact-dot" target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}" aria-label="Zhihu">
+                        <span class="footer-dot-text">&#30693;</span>
+                    </a>
                     {% endif %}
+                    <a class="footer-contact-dot" target="_blank" href="https://www.bilibili.com/" aria-label="Bilibili">
+                        <span class="footer-dot-text">B</span>
+                    </a>
                 </div>
             </div>
 
             <div class="footer-col footer-col-right">
-                <p class="footer-title">Built With</p>
                 <p class="footer-text">
-                    <a target="_blank" href="https://jekyllrb.com/">Jekyll</a> /
+                    Built with <a target="_blank" href="https://jekyllrb.com/">Jekyll</a> /
                     <a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
                 </p>
-                <p class="footer-text">
+                <p class="footer-text footer-text-theme">
                     Theme:
                     <a target="_blank" href="{{ site.github_repo }}">Lei Blog</a>
                 </p>

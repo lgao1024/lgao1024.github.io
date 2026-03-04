@@ -683,16 +683,16 @@ pre code {
   border-bottom-left-radius: 5px;
 }
 footer {
-  padding: 36px 0 54px;
+  padding: 24px 0 36px;
 }
 .footer-card {
   background: #eef1f4;
   border: 1px solid #d9e0e8;
   border-radius: 14px;
-  padding: 20px 24px;
+  padding: 12px 18px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  gap: 20px;
+  gap: 14px;
   align-items: center;
 }
 .footer-col-left {
@@ -704,19 +704,17 @@ footer {
 .footer-col-right {
   text-align: right;
 }
-.footer-title {
-  margin: 0 0 6px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #5f7f99;
-}
 .footer-text {
   margin: 0;
-  font-size: 16px;
-  line-height: 1.45;
+  font-size: 15px;
+  line-height: 1.35;
   color: #3f4750;
+}
+.footer-text-single {
+  white-space: nowrap;
+}
+.footer-text-theme {
+  margin-top: 2px;
 }
 .footer-text a {
   color: #1f4e79;
@@ -729,22 +727,26 @@ footer {
 .footer-contact-list {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
 }
 .footer-contact-dot {
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: #1f6fa7;
   border: 1px solid #1a5f8f;
   color: #fff;
-  font-weight: 800;
   font-size: 17px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: background-color 160ms ease, border-color 160ms ease, transform 120ms ease;
+}
+.footer-dot-text {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
 }
 .footer-contact-dot:hover,
 .footer-contact-dot:focus {
@@ -759,16 +761,13 @@ footer {
 @media only screen and (max-width: 767px) {
   .footer-card {
     grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 16px 18px;
+    gap: 10px;
+    padding: 12px 14px;
   }
   .footer-col-left,
   .footer-col-center,
   .footer-col-right {
     text-align: center;
-  }
-  .footer-text {
-    font-size: 15px;
   }
 }
 .floating-label-form-group {
