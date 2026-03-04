@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Tags"
-description: "Browse all tags"
+description: "Browse posts by tag"
 header-style: minimal
 sidebar: false
 body-class: home-hub
@@ -13,7 +13,35 @@ nav_exclude: true
     <h2 class="home-section-title">All tags</h2>
     <div class="home-tag-list">
         {% for tag in site.tags %}
-        <a class="home-tag" href="{{ site.baseurl }}/tags/{{ tag[0] | slugify }}/"># {{ tag[0] }} ({{ tag[1].size }})</a>
+        <a class="home-tag" href="{{ site.baseurl }}/tags/#{{ tag[0] | slugify }}"># {{ tag[0] }} ({{ tag[1].size }})</a>
         {% endfor %}
     </div>
 </section>
+
+{% for tag in site.tags %}
+<section class="home-section" id="{{ tag[0] | slugify }}">
+    <h2 class="home-section-title"># {{ tag[0] }}</h2>
+    <div class="home-post-list">
+        {% for post in tag[1] %}
+        <article class="home-post-card">
+            <div class="home-post-head">
+                <h3 class="home-post-title">
+                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h3>
+                <p class="home-post-date">{{ post.date | date: "%Y/%m/%d" }}</p>
+            </div>
+            {% if post.subtitle %}
+            <p class="home-post-subtitle">{{ post.subtitle }}</p>
+            {% endif %}
+            {% if post.tags and post.tags.size > 0 %}
+            <div class="home-post-tags">
+                {% for post_tag in post.tags %}
+                <a class="home-post-tag" href="{{ site.baseurl }}/tags/#{{ post_tag | slugify }}">{{ post_tag }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endfor %}

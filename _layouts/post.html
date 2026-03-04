@@ -30,7 +30,7 @@ layout: default
                 <div class="post-heading">
                     <div class="tags">
                         {% for tag in page.tags %}
-                        <a class="tag" href="{{ site.baseurl }}/tags/{{ tag | slugify }}/" title="{{ tag }}">{{ tag }}</a>
+                        <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" title="{{ tag }}">{{ tag }}</a>
                         {% endfor %}
                     </div>
                     <h1>{{ page.title }}</h1>
@@ -82,13 +82,13 @@ layout: default
                 </ul>
 
 
-                <!--Gitalk璇勮start  -->
+                <!--Gitalk鐠囧嫯顔憇tart  -->
                 {% if site.gitalk.enable %}
-                <!-- 寮曞叆Gitalk璇勮鎻掍欢  -->
+                <!-- 瀵洖鍙咷italk鐠囧嫯顔戦幓鎺嶆  -->
                 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
                 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
                 <div id="gitalk-container"></div>
-                <!-- 寮曞叆涓€涓敓浜d5鐨刯s锛岀敤浜庡id鍊艰繘琛屽鐞嗭紝闃叉鍏惰繃闀?-->
+                <!-- 瀵洖鍙嗘稉鈧稉顏嗘晸娴滎湷d5閻ㄥ埊s閿涘瞼鏁ゆ禍搴☆嚠id閸婅壈绻樼悰灞筋槱閻炲棴绱濋梼鍙夘剾閸忔儼绻冮梹?-->
                 <!-- Thank DF:https://github.com/NSDingFan/NSDingFan.github.io/issues/3#issuecomment-407496538 -->
                 <script src="{{ site.baseurl }}/js/md5.min.js"></script>
                 <script type="text/javascript">
@@ -107,11 +107,11 @@ layout: default
                 <!-- Gitalk end -->
 
                 {% if site.disqus_username %}
-                <!-- disqus 璇勮妗?start -->
+                <!-- disqus 鐠囧嫯顔戝?start -->
                 <div class="comment">
                     <div id="disqus_thread" class="disqus-thread"></div>
                 </div>
-                <!-- disqus 璇勮妗?end -->
+                <!-- disqus 鐠囧嫯顔戝?end -->
                 {% endif %}
 
             </div>  
@@ -147,7 +147,7 @@ layout: default
                     <div class="tags">
         				{% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
-                				<a href="/tags/{{ tag[0] | slugify }}/" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                				<a href="/tags/#{{ tag[0] | slugify }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
                                     {{ tag[0] }}
                                 </a>
                             {% endif %}
@@ -173,7 +173,7 @@ layout: default
 
 
 {% if site.disqus_username %}
-<!-- disqus 鍏叡JS浠ｇ爜 start (涓€涓綉椤靛彧闇€鎻掑叆涓€娆? -->
+<!-- disqus 閸忣剙鍙S娴狅絿鐖?start (娑撯偓娑擃亞缍夋い闈涘涧闂団偓閹绘帒鍙嗘稉鈧▎? -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "{{site.disqus_username}}";
@@ -186,7 +186,7 @@ layout: default
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- disqus 鍏叡JS浠ｇ爜 end -->
+<!-- disqus 閸忣剙鍙S娴狅絿鐖?end -->
 {% endif %}
 
 
@@ -205,7 +205,7 @@ layout: default
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
-        // BY Fix:鍘婚櫎鏍囬鍓嶇殑鈥?鈥?issues:<https://github.com/qiubaiying/qiubaiying.github.io/issues/137>
+        // BY Fix:閸樺娅庨弽鍥暯閸撳秶娈戦垾?閳?issues:<https://github.com/qiubaiying/qiubaiying.github.io/issues/137>
         // anchors.options = {
         //   visible: 'always',
         //   placement: 'right',
@@ -226,4 +226,5 @@ layout: default
     }
 </style>
 {% endif %}
+
 
