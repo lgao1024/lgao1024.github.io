@@ -1391,13 +1391,13 @@ a:focus {
   margin: 0;
 }
 .home-post-title a {
-  color: #7B4E8A;
+  color: #1f1f1f;
   text-decoration: none;
   transition: color 180ms ease, opacity 180ms ease;
 }
 .home-post-title a:hover,
 .home-post-title a:focus {
-  color: #1a4064;
+  color: #8A5C99;
   opacity: 0.9;
   text-decoration: none;
 }
@@ -1426,7 +1426,7 @@ a:focus {
   border-radius: 999px;
   padding: 4px 12px;
   background: transparent;
-  color: #7E7085;
+  color: #8A5C99;
   font-size: 14px;
   line-height: 1.5;
   text-decoration: none;
