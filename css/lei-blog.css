@@ -1122,7 +1122,11 @@ a:focus {
   color: #666;
 }
 .header-minimal .navbar-custom {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   background: #fff;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -1436,16 +1440,17 @@ a:focus {
 .home-hub .navbar-custom .navbar-brand,
 .about-hub .navbar-custom .navbar-brand {
   font-size: 22px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .home-hub .navbar-custom .nav li a,
 .about-hub .navbar-custom .nav li a {
   font-size: 16px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 0;
+  font-weight: 700;
   transition: color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
 }
 
@@ -1488,25 +1493,29 @@ a:focus {
 .header-minimal .navbar-custom .nav li a:hover,
 .header-minimal .navbar-custom .nav li a:focus {
   color: #0f4f82;
-  background: rgba(31, 111, 167, 0.08);
+  background: rgba(31, 111, 167, 0.12);
 }
 
 .header-minimal .navbar-custom .nav li.active > a,
 .header-minimal .navbar-custom .nav li.active > a:hover,
 .header-minimal .navbar-custom .nav li.active > a:focus {
-  color: #1f6fa7;
-  background: rgba(31, 111, 167, 0.12);
-  font-weight: 600;
-  box-shadow: inset 0 -2px 0 #1f6fa7;
+  color: #fff;
+  background: #1f6fa7;
+  font-weight: 800;
+  box-shadow: inset 0 -2px 0 #174f77;
 }
 
 .navbar-custom.is-fixed .nav li.active > a,
 .navbar-custom.is-fixed .nav li.active > a:hover,
 .navbar-custom.is-fixed .nav li.active > a:focus {
-  color: #1f6fa7;
-  background: rgba(31, 111, 167, 0.12);
-  font-weight: 600;
-  box-shadow: inset 0 -2px 0 #1f6fa7;
+  color: #fff;
+  background: #1f6fa7;
+  font-weight: 800;
+  box-shadow: inset 0 -2px 0 #174f77;
+}
+
+.header-minimal .intro-header.intro-header--minimal {
+  margin-top: 72px;
 }
 
 @media only screen and (min-width: 768px) {
