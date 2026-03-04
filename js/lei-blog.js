@@ -47,6 +47,17 @@ jQuery(document).ready(function($) {
     var $navbar = $('.header-minimal .navbar-custom');
     $navbar.addClass('is-fixed');
 
+    function updateNavMetrics() {
+        if (!$navbar.length) return;
+        var navHeight = Math.ceil($navbar.outerHeight() || 64);
+        var offset = $navbar.hasClass('is-fixed') ? (navHeight + 20) : 20;
+        document.documentElement.style.setProperty('--fixed-nav-height', navHeight + 'px');
+        document.documentElement.style.setProperty('--fixed-nav-offset', offset + 'px');
+    }
+
+    updateNavMetrics();
+    $(window).on('resize', updateNavMetrics);
+
     // On desktop:
     // content moves up (scroll down) -> hide navbar
     // content moves down (scroll up) -> show navbar
@@ -63,6 +74,7 @@ jQuery(document).ready(function($) {
                 $navbar.addClass('nav-slide-hidden');
             }
 
+            updateNavMetrics();
             lastTop = currentTop;
         });
     }
