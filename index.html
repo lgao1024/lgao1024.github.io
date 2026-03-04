@@ -8,9 +8,8 @@ body-class: home-hub
 ---
 
 <section class="home-section">
-    <div class="hub-with-nav">
+        <div class="hub-with-nav">
         <div class="hub-main">
-            <h2 class="home-section-title">Recent posts</h2>
             {% assign time_groups = paginator.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
             {% for group in time_groups %}
             <section class="home-time-group" id="time-{{ group.name }}" data-spy-section>

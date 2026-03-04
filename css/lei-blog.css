@@ -1267,14 +1267,17 @@ a:focus {
 }
 .home-time-title {
   margin: 0 0 12px;
-  font-size: 20px;
-  color: #7E7085;
+  font-size: 26px;
+  color: #8A5C99;
+  font-weight: 700;
 }
 .home-section-title {
-  font-size: 28px;
+  font-size: 26px;
   margin: 0 0 16px;
   line-height: 1.15;
   scroll-margin-top: 84px;
+  color: #8A5C99;
+  font-weight: 700;
 }
 .header-minimal.home-hub [data-spy-section] {
   scroll-margin-top: 84px;
@@ -1323,7 +1326,7 @@ a:focus {
 .hub-side-title {
   margin: 0 0 8px;
   font-size: 16px;
-  color: #7E7085;
+  color: #8A5C99;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -1491,6 +1494,7 @@ a:focus {
   .hub-side-list a.is-active {
     border-color: #8A5C99;
   }
+  .home-time-title,
   .home-section-title {
     font-size: 24px;
   }
