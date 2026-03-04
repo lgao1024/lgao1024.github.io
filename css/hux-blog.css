@@ -1185,12 +1185,12 @@ a:focus {
 }
 .home-tag {
   display: inline-block;
-  border: 1px solid #1f6fa7;
+  border: 1px solid #9fb6c9;
   border-radius: 999px;
   padding: 5px 13px;
   font-size: 16px;
-  color: #1f6fa7;
-  background: rgba(31, 111, 167, 0.12);
+  color: #5f7f99;
+  background: transparent;
   text-decoration: none;
   transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
 }
@@ -1268,11 +1268,11 @@ a:focus {
 }
 .home-post-tag {
   display: inline-block;
-  border: 1px solid #1f6fa7;
+  border: 1px solid #9fb6c9;
   border-radius: 999px;
   padding: 4px 12px;
-  background: rgba(31, 111, 167, 0.12);
-  color: #1f6fa7;
+  background: transparent;
+  color: #5f7f99;
   font-size: 14px;
   line-height: 1.5;
   text-decoration: none;
