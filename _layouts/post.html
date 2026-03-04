@@ -30,7 +30,7 @@ layout: default
                 <div class="post-heading">
                     <div class="tags">
                         {% for tag in page.tags %}
-                        <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                        <a class="tag" href="{{ site.baseurl }}/tags/{{ tag | slugify }}/" title="{{ tag }}">{{ tag }}</a>
                         {% endfor %}
                     </div>
                     <h1>{{ page.title }}</h1>
@@ -82,13 +82,13 @@ layout: default
                 </ul>
 
 
-                <!--Gitalk评论start  -->
+                <!--Gitalk璇勮start  -->
                 {% if site.gitalk.enable %}
-                <!-- 引入Gitalk评论插件  -->
+                <!-- 寮曞叆Gitalk璇勮鎻掍欢  -->
                 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
                 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
                 <div id="gitalk-container"></div>
-                <!-- 引入一个生产md5的js，用于对id值进行处理，防止其过长 -->
+                <!-- 寮曞叆涓€涓敓浜d5鐨刯s锛岀敤浜庡id鍊艰繘琛屽鐞嗭紝闃叉鍏惰繃闀?-->
                 <!-- Thank DF:https://github.com/NSDingFan/NSDingFan.github.io/issues/3#issuecomment-407496538 -->
                 <script src="{{ site.baseurl }}/js/md5.min.js"></script>
                 <script type="text/javascript">
@@ -107,11 +107,11 @@ layout: default
                 <!-- Gitalk end -->
 
                 {% if site.disqus_username %}
-                <!-- disqus 评论框 start -->
+                <!-- disqus 璇勮妗?start -->
                 <div class="comment">
                     <div id="disqus_thread" class="disqus-thread"></div>
                 </div>
-                <!-- disqus 评论框 end -->
+                <!-- disqus 璇勮妗?end -->
                 {% endif %}
 
             </div>  
@@ -147,7 +147,7 @@ layout: default
                     <div class="tags">
         				{% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
-                				<a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                				<a href="/tags/{{ tag[0] | slugify }}/" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
                                     {{ tag[0] }}
                                 </a>
                             {% endif %}
@@ -173,7 +173,7 @@ layout: default
 
 
 {% if site.disqus_username %}
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<!-- disqus 鍏叡JS浠ｇ爜 start (涓€涓綉椤靛彧闇€鎻掑叆涓€娆? -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "{{site.disqus_username}}";
@@ -186,7 +186,7 @@ layout: default
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- disqus 公共JS代码 end -->
+<!-- disqus 鍏叡JS浠ｇ爜 end -->
 {% endif %}
 
 
@@ -205,7 +205,7 @@ layout: default
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
-        // BY Fix:去除标题前的‘#’ issues:<https://github.com/qiubaiying/qiubaiying.github.io/issues/137>
+        // BY Fix:鍘婚櫎鏍囬鍓嶇殑鈥?鈥?issues:<https://github.com/qiubaiying/qiubaiying.github.io/issues/137>
         // anchors.options = {
         //   visible: 'always',
         //   placement: 'right',
@@ -226,3 +226,4 @@ layout: default
     }
 </style>
 {% endif %}
+

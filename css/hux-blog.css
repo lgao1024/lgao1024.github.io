@@ -1222,6 +1222,14 @@ a:focus {
 }
 .home-post-title a {
   color: #1f4e79;
+  text-decoration: none;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.home-post-title a:hover,
+.home-post-title a:focus {
+  color: #1a4064;
+  opacity: 0.9;
+  text-decoration: none;
 }
 .home-post-date {
   margin: 2px 0 0;

@@ -36,7 +36,7 @@ layout: default
                     <div class="post-heading">
                         <div class="tags">
                             {% for tag in page.tags %}
-                            <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                            <a class="tag" href="{{ site.baseurl }}/tags/{{ tag | slugify }}/" title="{{ tag }}">{{ tag }}</a>
                             {% endfor %}
                         </div>
                         <h1>{{ page.title }}</h1>
@@ -88,7 +88,7 @@ layout: default
                     {% endif %}
                 </ul>
 
-                <!-- Gitalk 评论 start  -->
+                <!-- Gitalk 璇勮 start  -->
                 {% if site.gitalk.enable %}
                 <!-- Gitalk link  -->
                 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
@@ -110,13 +110,13 @@ layout: default
                 <!-- Gitalk end -->
 
                 {% if site.disqus.enable %}
-                <!-- disqus 评论框 start -->
+                <!-- disqus 璇勮妗?start -->
                 <div class="comment">
                     <div id="disqus_thread" class="disqus-thread">
 
                     </div>
                 </div>
-                <!-- disqus 评论框 end -->
+                <!-- disqus 璇勮妗?end -->
                 {% endif %}
 
             </div>
@@ -134,7 +134,7 @@ layout: default
                     <div class="tags">
                         {% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
-                                <a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                                <a href="/tags/{{ tag[0] | slugify }}/" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
                                     {{ tag[0] }}
                                 </a>
                             {% endif %}
@@ -184,7 +184,7 @@ layout: default
 
 
 {% if site.disqus.enable %}
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<!-- disqus 鍏叡JS浠ｇ爜 start (涓€涓綉椤靛彧闇€鎻掑叆涓€娆? -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "{{site.disqus.username}}";
@@ -197,7 +197,7 @@ layout: default
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- disqus 公共JS代码 end -->
+<!-- disqus 鍏叡JS浠ｇ爜 end -->
 {% endif %}
 
 
@@ -236,3 +236,4 @@ layout: default
     }
 </style>
 {% endif %}
+
