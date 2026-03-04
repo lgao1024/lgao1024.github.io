@@ -3,31 +3,39 @@ layout: page
 description: "For chemistry and coding."
 header-style: minimal
 hide-header: true
+sidebar: false
+body-class: home-hub
 ---
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
+<section class="home-section">
+    <h2 class="home-section-title">Popular tags</h2>
+    <div class="home-tag-list">
+        {% for tag in site.tags %}
+            {% if tag[1].size > site.featured-condition-size %}
+            <a class="home-tag" href="{{ site.baseurl }}/tags/#{{ tag[0] }}"># {{ tag[0] }}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
 
-<!-- Pager -->
+<section class="home-section">
+    <h2 class="home-section-title">Recent posts</h2>
+    <div class="home-post-list">
+        {% for post in paginator.posts %}
+        <article class="home-post-card">
+            <h3 class="home-post-title">
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h3>
+            <p class="home-post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+            {% if post.subtitle %}
+            <p class="home-post-subtitle">{{ post.subtitle }}</p>
+            {% endif %}
+            <p class="home-post-excerpt">{{ post.content | strip_html | truncate:160 }}</p>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
     {% if paginator.previous_page %}
