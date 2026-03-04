@@ -189,6 +189,30 @@
 {% endif %}
 
 
+<!-- Clickable post cards on home/tags pages -->
+<script>
+    (function () {
+        function shouldIgnoreClick(target) {
+            return !!target.closest('a, button, input, textarea, select, label');
+        }
+
+        document.addEventListener('click', function (e) {
+            var card = e.target.closest('.home-post-card[data-href]');
+            if (!card || shouldIgnoreClick(e.target)) return;
+            window.location.href = card.getAttribute('data-href');
+        });
+
+        document.addEventListener('keydown', function (e) {
+            var card = e.target.closest('.home-post-card[data-href]');
+            if (!card) return;
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                window.location.href = card.getAttribute('data-href');
+            }
+        });
+    })();
+</script>
+
 <!-- Baidu Tongji -->
 {% if site.ba_track_id %}
 <script>

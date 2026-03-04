@@ -24,7 +24,7 @@ hide-header: true
     <h2 class="home-section-title"># {{ tag[0] }}</h2>
     <div class="home-post-list">
         {% for post in tag[1] %}
-        <article class="home-post-card">
+        <article class="home-post-card" data-href="{{ post.url | prepend: site.baseurl }}" role="link" tabindex="0">
             <div class="home-post-head">
                 <h3 class="home-post-title">
                     <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>

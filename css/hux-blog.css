@@ -1190,7 +1190,7 @@ a:focus {
   padding: 5px 13px;
   font-size: 16px;
   color: #1f6fa7;
-  background: transparent;
+  background: rgba(31, 111, 167, 0.12);
   text-decoration: none;
   transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
 }
@@ -1211,6 +1211,19 @@ a:focus {
   border-radius: 10px;
   padding: 20px 22px;
   background: #fff;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 80ms ease, box-shadow 160ms ease;
+}
+.home-post-card:hover,
+.home-post-card:focus {
+  border-color: #a9c3da;
+  background: rgba(31, 111, 167, 0.06);
+  box-shadow: 0 2px 10px rgba(31, 111, 167, 0.08);
+}
+.home-post-card:active {
+  border-color: #7ca8cb;
+  background: rgba(31, 111, 167, 0.1);
+  transform: translateY(1px);
 }
 .home-post-head {
   display: flex;
@@ -1258,7 +1271,7 @@ a:focus {
   border: 1px solid #1f6fa7;
   border-radius: 999px;
   padding: 4px 12px;
-  background: transparent;
+  background: rgba(31, 111, 167, 0.12);
   color: #1f6fa7;
   font-size: 14px;
   line-height: 1.5;
