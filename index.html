@@ -23,14 +23,22 @@ body-class: home-hub
     <div class="home-post-list">
         {% for post in paginator.posts %}
         <article class="home-post-card">
-            <h3 class="home-post-title">
-                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h3>
-            <p class="home-post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+            <div class="home-post-head">
+                <h3 class="home-post-title">
+                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h3>
+                <p class="home-post-date">{{ post.date | date: "%Y/%m/%d" }}</p>
+            </div>
             {% if post.subtitle %}
             <p class="home-post-subtitle">{{ post.subtitle }}</p>
             {% endif %}
-            <p class="home-post-excerpt">{{ post.content | strip_html | truncate:160 }}</p>
+            {% if post.tags and post.tags.size > 0 %}
+            <div class="home-post-tags">
+                {% for tag in post.tags %}
+                <a class="home-post-tag" href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
         </article>
         {% endfor %}
     </div>
