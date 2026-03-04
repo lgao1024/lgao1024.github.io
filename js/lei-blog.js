@@ -47,24 +47,23 @@ jQuery(document).ready(function($) {
     var $navbar = $('.header-minimal .navbar-custom');
     $navbar.addClass('is-fixed');
 
-    function updateNavMetrics() {
-        if (!$navbar.length) return;
-        var navHeight = Math.ceil($navbar.outerHeight() || 64);
-        var offset = $navbar.hasClass('is-fixed') ? (navHeight + 20) : 20;
-        document.documentElement.style.setProperty('--fixed-nav-height', navHeight + 'px');
-        document.documentElement.style.setProperty('--fixed-nav-offset', offset + 'px');
-    }
-
-    updateNavMetrics();
-    $(window).on('resize', updateNavMetrics);
-
     // On desktop:
     // content moves up (scroll down) -> hide navbar
     // content moves down (scroll up) -> show navbar
     if ($navbar.length && $(window).width() >= 768) {
         var lastTop = $(window).scrollTop();
+        var userScrollUntil = 0;
+
+        function markUserScroll() {
+            userScrollUntil = Date.now() + 220;
+        }
+
+        window.addEventListener('wheel', markUserScroll, { passive: true });
+        window.addEventListener('touchmove', markUserScroll, { passive: true });
+
         $(window).on('scroll', function() {
             var currentTop = $(window).scrollTop();
+            if (Date.now() > userScrollUntil) return;
 
             if (Math.abs(currentTop - lastTop) < 2) return;
 
@@ -74,7 +73,6 @@ jQuery(document).ready(function($) {
                 $navbar.addClass('nav-slide-hidden');
             }
 
-            updateNavMetrics();
             lastTop = currentTop;
         });
     }
