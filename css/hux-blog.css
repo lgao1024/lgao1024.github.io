@@ -1173,10 +1173,20 @@ a:focus {
 .home-section {
   margin-bottom: 30px;
 }
+.home-time-group {
+  margin-bottom: 26px;
+  scroll-margin-top: 90px;
+}
+.home-time-title {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #5f7f99;
+}
 .home-section-title {
   font-size: 28px;
   margin: 0 0 16px;
   line-height: 1.15;
+  scroll-margin-top: 90px;
 }
 .home-tag-list {
   display: flex;
@@ -1205,6 +1215,56 @@ a:focus {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+.hub-with-nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 28px;
+  align-items: start;
+}
+.hub-main {
+  min-width: 0;
+}
+.hub-side-nav {
+  position: sticky;
+  top: 86px;
+}
+.hub-side-title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #5f7f99;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.hub-side-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid #d8dee5;
+}
+.hub-side-list li {
+  margin: 0;
+}
+.hub-side-list a {
+  display: block;
+  padding: 7px 10px 7px 12px;
+  color: #5f7f99;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: color 150ms ease, border-color 150ms ease, background-color 150ms ease;
+}
+.hub-side-list a:hover,
+.hub-side-list a:focus {
+  color: #1f6fa7;
+  background: rgba(31, 111, 167, 0.08);
+  border-left-color: #9fb6c9;
+  text-decoration: none;
+}
+.hub-side-list a.is-active {
+  color: #1f6fa7;
+  border-left-color: #1f6fa7;
+  background: rgba(31, 111, 167, 0.12);
+  font-weight: 600;
 }
 .home-post-card {
   border: 1px solid #d8dee5;
@@ -1317,6 +1377,29 @@ a:focus {
 }
 
 @media only screen and (max-width: 767px) {
+  .hub-with-nav {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .hub-side-nav {
+    position: static;
+    order: -1;
+  }
+  .hub-side-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-left: none;
+  }
+  .hub-side-list a {
+    border: 1px solid #d8dee5;
+    border-left-width: 1px;
+    border-radius: 999px;
+    padding: 4px 10px;
+  }
+  .hub-side-list a.is-active {
+    border-color: #1f6fa7;
+  }
   .home-section-title {
     font-size: 24px;
   }

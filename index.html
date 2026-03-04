@@ -8,28 +8,46 @@ body-class: home-hub
 ---
 
 <section class="home-section">
-    <h2 class="home-section-title">Recent posts</h2>
-    <div class="home-post-list">
-        {% for post in paginator.posts %}
-        <article class="home-post-card" data-href="{{ post.url | prepend: site.baseurl }}" role="link" tabindex="0">
-            <div class="home-post-head">
-                <h3 class="home-post-title">
-                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h3>
-                <p class="home-post-date">{{ post.date | date: "%Y/%m/%d" }}</p>
-            </div>
-            {% if post.subtitle %}
-            <p class="home-post-subtitle">{{ post.subtitle }}</p>
-            {% endif %}
-            {% if post.tags and post.tags.size > 0 %}
-            <div class="home-post-tags">
-                {% for tag in post.tags %}
-                <a class="home-post-tag" href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
+    <div class="hub-with-nav">
+        <div class="hub-main">
+            <h2 class="home-section-title">Recent posts</h2>
+            {% assign time_groups = paginator.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
+            {% for group in time_groups %}
+            <section class="home-time-group" id="time-{{ group.name }}" data-spy-section>
+                <h3 class="home-time-title">{{ group.items[0].date | date: "%Y-%m" }}</h3>
+                <div class="home-post-list">
+                    {% for post in group.items %}
+                    <article class="home-post-card" data-href="{{ post.url | prepend: site.baseurl }}" role="link" tabindex="0">
+                        <div class="home-post-head">
+                            <h3 class="home-post-title">
+                                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                            </h3>
+                            <p class="home-post-date">{{ post.date | date: "%Y/%m/%d" }}</p>
+                        </div>
+                        {% if post.subtitle %}
+                        <p class="home-post-subtitle">{{ post.subtitle }}</p>
+                        {% endif %}
+                        {% if post.tags and post.tags.size > 0 %}
+                        <div class="home-post-tags">
+                            {% for tag in post.tags %}
+                            <a class="home-post-tag" href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </article>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endfor %}
+        </div>
+        <aside class="hub-side-nav" aria-label="Timeline">
+            <h3 class="hub-side-title">Timeline</h3>
+            <ul class="hub-side-list">
+                {% for group in time_groups %}
+                <li><a href="#time-{{ group.name }}" data-spy-link>{{ group.items[0].date | date: "%Y-%m" }}</a></li>
                 {% endfor %}
-            </div>
-            {% endif %}
-        </article>
-        {% endfor %}
+            </ul>
+        </aside>
     </div>
 </section>
 

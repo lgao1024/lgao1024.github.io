@@ -213,6 +213,45 @@
     })();
 </script>
 
+<!-- Section spy for right-side navigation -->
+<script>
+    (function () {
+        var links = Array.prototype.slice.call(document.querySelectorAll('[data-spy-link]'));
+        if (!links.length) return;
+
+        var sections = links
+            .map(function (link) {
+                var id = (link.getAttribute('href') || '').replace(/^#/, '');
+                if (!id) return null;
+                return document.getElementById(id);
+            })
+            .filter(Boolean);
+        if (!sections.length) return;
+
+        function setActive(id) {
+            links.forEach(function (link) {
+                var target = (link.getAttribute('href') || '').replace(/^#/, '');
+                link.classList.toggle('is-active', target === id);
+            });
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+            var visible = entries
+                .filter(function (entry) { return entry.isIntersecting; })
+                .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+            if (!visible.length) return;
+            setActive(visible[0].target.id);
+        }, {
+            root: null,
+            rootMargin: '-15% 0px -70% 0px',
+            threshold: 0.01
+        });
+
+        sections.forEach(function (section) { observer.observe(section); });
+        setActive(sections[0].id);
+    })();
+</script>
+
 <!-- Baidu Tongji -->
 {% if site.ba_track_id %}
 <script>
