@@ -1198,7 +1198,7 @@ a:focus {
   background: #fff;
   border-bottom: 1px solid #e6e6e6;
   transition: transform 220ms ease;
-  min-height: 64px;
+  min-height: 48px;
 }
 .header-minimal .navbar-custom.is-fixed,
 .header-minimal .navbar-custom.is-visible {
