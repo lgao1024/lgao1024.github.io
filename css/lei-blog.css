@@ -1341,13 +1341,18 @@ a:focus {
   margin: 0;
 }
 .hub-side-list a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 36px;
-  padding: 4px 10px 4px 12px;
+  padding: 4px 10px;
+  font-size: 15px;
   line-height: 1.35;
+  text-align: center;
   color: #7E7085;
   text-decoration: none;
   border-left: 2px solid transparent;
+  border-radius: 8px;
   transition: color 150ms ease, border-color 150ms ease, background-color 150ms ease;
 }
 .hub-side-list a:hover,
@@ -1385,6 +1390,9 @@ a:focus {
 .post-detail-section .postlist-container {
   margin-bottom: 0;
 }
+.post-detail-section {
+  margin-bottom: 9px;
+}
 .post-detail-card {
   cursor: default;
 }
@@ -1407,8 +1415,8 @@ a:focus {
   overflow: auto;
 }
 .post-side-nav .post-side-nav-sub {
-  padding-left: 24px;
-  font-size: 14px;
+  padding-left: 0;
+  font-size: inherit;
 }
 .post-detail-title {
   font-size: 32px;
@@ -1427,7 +1435,7 @@ a:focus {
   margin-bottom: 8px;
 }
 .post-detail-pager {
-  margin-top: 10px !important;
+  margin-top: 5px !important;
   margin-bottom: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -1648,9 +1656,10 @@ a:focus {
   .hub-side-list a {
     border: none;
     border-left: 2px solid transparent;
-    border-radius: 0;
+    border-radius: 8px;
     min-height: 34px;
-    padding: 4px 10px 4px 12px;
+    padding: 4px 10px;
+    font-size: 15px;
     line-height: 1.35;
   }
   .hub-side-list a.is-active {
@@ -1722,7 +1731,7 @@ a:focus {
   align-items: center;
   padding-top: 0;
   padding-bottom: 0;
-  border-radius: 0;
+  border-radius: 8px;
   font-weight: 800;
   transition: color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
 }
