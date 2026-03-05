@@ -1343,12 +1343,12 @@ a:focus {
 .hub-side-list a {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 36px;
-  padding: 4px 10px;
+  padding: 4px 12px;
   font-size: 15px;
   line-height: 1.35;
-  text-align: center;
+  text-align: left;
   color: #7E7085;
   text-decoration: none;
   border-left: 2px solid transparent;
@@ -1423,7 +1423,7 @@ a:focus {
   overflow: auto;
 }
 .post-side-nav .post-side-nav-sub {
-  padding-left: 0;
+  padding-left: 26px;
   font-size: inherit;
 }
 .post-detail-title {
@@ -1666,9 +1666,11 @@ a:focus {
     border-left: 2px solid transparent;
     border-radius: 8px;
     min-height: 34px;
-    padding: 4px 10px;
+    padding: 4px 12px;
     font-size: 15px;
     line-height: 1.35;
+    justify-content: flex-start;
+    text-align: left;
   }
   .hub-side-list a.is-active {
     border-left-color: transparent;
