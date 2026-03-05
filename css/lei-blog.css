@@ -1424,6 +1424,7 @@ a:focus {
   margin-bottom: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
+  padding: 0 !important;
   padding-left: 0 !important;
   padding-inline-start: 0 !important;
   list-style: none;
