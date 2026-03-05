@@ -1430,7 +1430,8 @@ a:focus {
   list-style: none;
   width: 100%;
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: stretch;
   gap: 20px;
 }
@@ -1442,6 +1443,7 @@ a:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1482,9 +1484,10 @@ a:focus {
 }
 .post-detail-pager li {
   width: auto !important;
-  flex: 1 1 0;
+  min-width: 0;
   margin: 0 !important;
   list-style: none;
+  display: block;
 }
 .post-detail-pager li.is-placeholder {
   visibility: hidden;
@@ -1666,8 +1669,8 @@ a:focus {
     padding: 3px 10px;
   }
   .post-detail-pager {
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 10px;
   }
   .post-detail-pager li.is-placeholder {
@@ -1675,7 +1678,6 @@ a:focus {
   }
   .post-detail-pager li {
     width: auto !important;
-    flex: 1 1 0;
     min-width: 0;
     float: none !important;
     margin-bottom: 0;
