@@ -1364,7 +1364,7 @@ a:focus {
 .home-post-card {
   border: 1px solid #d8dee5;
   border-radius: 10px;
-  padding: 20px 22px;
+  padding: 18px 20px;
   background: #fff;
   cursor: pointer;
   transition: background-color 160ms ease, border-color 160ms ease, transform 80ms ease, box-shadow 160ms ease;
@@ -1409,18 +1409,23 @@ a:focus {
   font-size: 14px;
 }
 .post-detail-title {
-  font-size: 34px;
+  font-size: 32px;
   line-height: 1.2;
   color: #1f1f1f;
 }
 .post-detail-content {
-  margin-top: 18px;
+  margin-top: 14px;
 }
 .post-detail-content p {
-  margin: 18px 0;
+  margin: 14px 0;
+}
+.post-detail-content h2,
+.post-detail-content h3 {
+  margin-top: 22px;
+  margin-bottom: 8px;
 }
 .post-detail-pager {
-  margin-top: 20px !important;
+  margin-top: 14px !important;
   margin-bottom: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -1508,7 +1513,7 @@ a:focus {
 .post-detail-content .pager li > a {
   border: 1px solid #d8dee5;
   border-radius: 10px;
-  padding: 14px 16px;
+  padding: 10px 14px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #8A5C99;
@@ -1556,12 +1561,12 @@ a:focus {
 .home-post-date {
   margin: 2px 0 0;
   color: #666;
-  font-size: 16px;
+  font-size: 15px;
   white-space: nowrap;
 }
 .home-post-subtitle,
 .home-post-excerpt {
-  margin: 12px 0 0;
+  margin: 8px 0 0;
   color: #3f4750;
   font-size: 17px;
   line-height: 1.55;
@@ -1570,7 +1575,7 @@ a:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 14px;
+  margin-top: 10px;
 }
 .home-post-tag {
   display: inline-block;
@@ -1652,7 +1657,7 @@ a:focus {
     font-size: 24px;
   }
   .home-post-title {
-    font-size: 20px;
+    font-size: 19px;
   }
   .home-post-head {
     flex-direction: column;
@@ -1667,7 +1672,7 @@ a:focus {
   }
   .home-post-subtitle,
   .home-post-excerpt {
-    font-size: 16px;
+    font-size: 15px;
   }
   .home-post-tag {
     font-size: 13px;
@@ -1676,7 +1681,7 @@ a:focus {
   .post-detail-pager {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 10px;
+    gap: 8px;
   }
   .post-detail-pager li.is-placeholder {
     display: list-item;
