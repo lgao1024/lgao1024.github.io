@@ -1342,7 +1342,9 @@ a:focus {
 }
 .hub-side-list a {
   display: block;
-  padding: 7px 10px 7px 12px;
+  min-height: 36px;
+  padding: 4px 10px 4px 12px;
+  line-height: 1.35;
   color: #7E7085;
   text-decoration: none;
   border-left: 2px solid transparent;
@@ -1444,8 +1446,8 @@ a:focus {
 .post-detail-pager li > a {
   border: 1px solid #d8dee5;
   border-radius: 10px;
-  padding: 10px 22px;
-  min-height: 64px;
+  padding: 8px 18px;
+  min-height: 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1647,7 +1649,9 @@ a:focus {
     border: none;
     border-left: 2px solid transparent;
     border-radius: 0;
-    padding: 7px 10px 7px 12px;
+    min-height: 34px;
+    padding: 4px 10px 4px 12px;
+    line-height: 1.35;
   }
   .hub-side-list a.is-active {
     border-left-color: #8A5C99;
