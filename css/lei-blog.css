@@ -1419,8 +1419,49 @@ a:focus {
 .post-detail-content p {
   margin: 18px 0;
 }
-.post-detail-content .pager {
-  margin-top: 28px;
+.post-detail-pager {
+  margin-top: 16px !important;
+  margin-bottom: 0 !important;
+}
+.post-detail-pager li > a {
+  border: 1px solid #d8dee5;
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8A5C99;
+  background: #fff;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+.post-detail-pager li > a > span {
+  color: #5f6368;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.post-detail-pager li > a:hover,
+.post-detail-pager li > a:focus {
+  border-color: #D3C2D9;
+  background: rgba(138, 92, 153, 0.08);
+  color: #8A5C99;
+}
+.post-detail-pager li > a:hover > span,
+.post-detail-pager li > a:focus > span {
+  color: #3f4750;
+}
+.post-detail-pager::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.post-detail-pager li {
+  width: calc(50% - 10px) !important;
+}
+.post-detail-pager li.previous {
+  float: left;
+}
+.post-detail-pager li.next {
+  float: right;
 }
 .post-detail-content .pager li > a {
   border: 1px solid #d8dee5;
@@ -1548,20 +1589,21 @@ a:focus {
     position: static;
     order: -1;
   }
+  .hub-side-nav {
+    margin-bottom: 6px;
+  }
   .hub-side-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    border-left: none;
+    display: block;
+    border-left: 1px solid #d8dee5;
   }
   .hub-side-list a {
-    border: 1px solid #d8dee5;
-    border-left-width: 1px;
-    border-radius: 999px;
-    padding: 4px 10px;
+    border: none;
+    border-left: 2px solid transparent;
+    border-radius: 0;
+    padding: 7px 10px 7px 12px;
   }
   .hub-side-list a.is-active {
-    border-color: #8A5C99;
+    border-left-color: #8A5C99;
   }
   .home-time-title,
   .home-section-title {
@@ -1588,6 +1630,11 @@ a:focus {
   .home-post-tag {
     font-size: 13px;
     padding: 3px 10px;
+  }
+  .post-detail-pager li {
+    width: 100% !important;
+    float: none !important;
+    margin-bottom: 10px;
   }
 }
 
