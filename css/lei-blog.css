@@ -1420,11 +1420,11 @@ a:focus {
   margin: 18px 0;
 }
 .post-detail-pager {
-  margin-top: 16px !important;
+  margin-top: 20px !important;
   margin-bottom: 0 !important;
   display: flex;
   align-items: stretch;
-  gap: 14px;
+  gap: 20px;
 }
 .post-detail-pager li > a {
   border: 1px solid #d8dee5;
@@ -1440,6 +1440,10 @@ a:focus {
   color: #8A5C99;
   background: #fff;
   transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+.post-detail-pager li.previous > a,
+.post-detail-pager li.next > a {
+  float: none;
 }
 .post-detail-pager li > a > span {
   color: #5f6368;
@@ -1464,6 +1468,10 @@ a:focus {
   width: auto !important;
   flex: 1 1 0;
   margin: 0 !important;
+}
+.post-detail-pager li.is-placeholder {
+  visibility: hidden;
+  pointer-events: none;
 }
 .post-detail-pager li.previous {
   float: none;
@@ -1642,6 +1650,9 @@ a:focus {
   .post-detail-pager {
     display: block;
     gap: 0;
+  }
+  .post-detail-pager li.is-placeholder {
+    display: none;
   }
   .post-detail-pager li {
     width: 100% !important;
