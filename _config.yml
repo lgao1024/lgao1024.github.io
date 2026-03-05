@@ -1,7 +1,7 @@
 # Site settings
 title: Lei's Blog
 SEOTitle: Lei's Blog
-header-img: img/post-bg-desk.jpg
+# header-img: img/post-bg-desk.jpg
 email: lgao1024@outlook.com
 description: "Every failure is leading towards success."
 keyword: "Lei, Lei's Blog, LeiGao"
