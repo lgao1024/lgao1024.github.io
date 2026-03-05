@@ -1432,6 +1432,7 @@ a:focus {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  justify-items: stretch;
   align-items: stretch;
   gap: 20px;
 }
@@ -1486,6 +1487,7 @@ a:focus {
   width: auto !important;
   min-width: 0;
   margin: 0 !important;
+  padding: 0 !important;
   list-style: none;
   display: block;
 }
@@ -1494,11 +1496,14 @@ a:focus {
   pointer-events: none;
 }
 .post-detail-pager li.previous {
+  grid-column: 1;
   float: none;
   margin-left: 0 !important;
 }
 .post-detail-pager li.next {
+  grid-column: 2;
   float: none;
+  margin-right: 0 !important;
 }
 .post-detail-content .pager li > a {
   border: 1px solid #d8dee5;
