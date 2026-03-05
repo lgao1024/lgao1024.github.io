@@ -1367,13 +1367,13 @@ a:focus {
   border-left-color: transparent;
   background: #8A5C99;
   font-weight: 800;
-  box-shadow: inset 0 -2px 0 #5D3B67;
+  box-shadow: inset -2px 0 0 #5D3B67;
 }
 .hub-side-list a:active {
   color: #fff;
   border-left-color: transparent;
   background: #8A5C99;
-  box-shadow: inset 0 -2px 0 #5D3B67;
+  box-shadow: inset -2px 0 0 #5D3B67;
   text-decoration: none;
 }
 .home-post-card {
