@@ -1433,6 +1433,8 @@ a:focus {
 }
 .post-detail-content {
   margin-top: 14px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .post-detail-content p {
   margin: 14px 0;
