@@ -1427,6 +1427,8 @@ a:focus {
   padding-left: 0 !important;
   padding-inline-start: 0 !important;
   list-style: none;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   align-items: stretch;
   gap: 20px;
@@ -1434,8 +1436,8 @@ a:focus {
 .post-detail-pager li > a {
   border: 1px solid #d8dee5;
   border-radius: 10px;
-  padding: 20px 22px;
-  min-height: 128px;
+  padding: 10px 22px;
+  min-height: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1489,6 +1491,7 @@ a:focus {
 }
 .post-detail-pager li.previous {
   float: none;
+  margin-left: 0 !important;
 }
 .post-detail-pager li.next {
   float: none;
