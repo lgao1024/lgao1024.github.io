@@ -1279,7 +1279,8 @@ a:focus {
   color: #8A5C99;
   font-weight: 700;
 }
-.header-minimal.home-hub [data-spy-section] {
+.header-minimal.home-hub [data-spy-section],
+.header-minimal.about-hub [data-spy-section] {
   scroll-margin-top: 84px;
 }
 .home-tag-list {
