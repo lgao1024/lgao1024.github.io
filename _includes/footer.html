@@ -210,7 +210,7 @@
 
 
 <!-- Side Catalog -->
-{% if page.catalog %}
+{% if page.catalog and page.layout != "post" %}
 <script type="text/javascript">
     function generateCatalog (selector) {
         var P = $('div.post-container'),a,n,t,l,i,c;
