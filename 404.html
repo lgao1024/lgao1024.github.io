@@ -7,34 +7,22 @@ header-style: minimal
 hide-header: true
 sidebar: false
 body-class: home-hub
+nav_exclude: true
 ---
 
-<section class="home-section">
-    <div class="hub-with-nav">
-        <div class="hub-main">
-            <section class="home-time-group" id="error-404" data-spy-section>
-                <h2 class="home-section-title">404</h2>
-                <article class="home-post-card" style="cursor: default;">
-                    <div class="home-post-head">
-                        <h3 class="home-post-title">Page Not Found</h3>
-                        <p class="home-post-date">Error</p>
-                    </div>
-                    <p class="home-post-excerpt">The page you are looking for does not exist, may have moved, or the URL is incorrect.</p>
-                    <div class="home-post-tags">
-                        <a class="home-post-tag" href="{{ site.baseurl }}/">Back to Home</a>
-                        <a class="home-post-tag" href="{{ site.baseurl }}/tags/">Browse Tags</a>
-                    </div>
-                </article>
-            </section>
-        </div>
-
-        <aside class="hub-side-nav" aria-label="404 navigation">
-            <h3 class="hub-side-title">Navigation</h3>
-            <ul class="hub-side-list">
-                <li><a href="{{ site.baseurl }}/">Home</a></li>
-                <li><a href="{{ site.baseurl }}/about/">About</a></li>
-                <li><a href="{{ site.baseurl }}/tags/">Tags</a></li>
-            </ul>
-        </aside>
-    </div>
+<section class="home-section" style="min-height: calc(100vh - 180px); display: flex; align-items: center;">
+    <section class="home-time-group" id="error-404" data-spy-section style="width: 100%; margin-bottom: 0;">
+        <h2 class="home-section-title">404</h2>
+        <article class="home-post-card" style="cursor: default;">
+            <div class="home-post-head">
+                <h3 class="home-post-title">Page Not Found</h3>
+                <p class="home-post-date">Error</p>
+            </div>
+            <p class="home-post-excerpt">The page you are looking for does not exist, may have moved, or the URL is incorrect.</p>
+            <div class="home-post-tags">
+                <a class="home-post-tag" href="{{ site.baseurl }}/">Back to Home</a>
+                <a class="home-post-tag" href="{{ site.baseurl }}/tags/">Browse Tags</a>
+            </div>
+        </article>
+    </section>
 </section>
