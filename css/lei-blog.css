@@ -1837,6 +1837,8 @@ a:focus {
   .about-hub .navbar-custom .navbar-header {
     min-height: 44px;
     position: relative;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .home-hub .navbar-custom .navbar-brand,
@@ -1844,7 +1846,8 @@ a:focus {
     float: left;
     height: 44px;
     margin: 0;
-    padding: 0 0 0 10px;
+    margin-left: 0;
+    padding: 0;
     line-height: 44px;
     font-size: 20px;
   }
@@ -1871,6 +1874,8 @@ a:focus {
   .about-hub .navbar-default .navbar-collapse {
     width: 140px;
     margin-top: 4px;
+    padding-left: 0;
+    padding-right: 0;
     border-radius: 10px;
     box-shadow: 9px 0 16px -8px rgba(0, 0, 0, 0.28), 3px 0 7px rgba(0, 0, 0, 0.14);
   }
