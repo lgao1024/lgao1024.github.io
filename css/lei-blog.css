@@ -1823,4 +1823,81 @@ a:focus {
     padding-left: 16px;
     padding-right: 16px;
   }
+
+  .header-minimal .navbar-custom {
+    min-height: 44px;
+  }
+
+  .header-minimal.home-hub,
+  .header-minimal.about-hub {
+    padding-top: 44px;
+  }
+
+  .home-hub .navbar-custom .navbar-header,
+  .about-hub .navbar-custom .navbar-header {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .home-hub .navbar-custom .navbar-brand,
+  .about-hub .navbar-custom .navbar-brand {
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    font-size: 20px;
+  }
+
+  .home-hub .navbar-default .navbar-toggle,
+  .about-hub .navbar-default .navbar-toggle {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-hub .navbar-default .navbar-toggle .icon-bar,
+  .about-hub .navbar-default .navbar-toggle .icon-bar {
+    width: 16px;
+  }
+
+  .home-hub .navbar-default .navbar-collapse,
+  .about-hub .navbar-default .navbar-collapse {
+    width: 164px;
+    margin-top: 4px;
+    border-radius: 10px;
+    box-shadow: 9px 0 16px -8px rgba(0, 0, 0, 0.28), 3px 0 7px rgba(0, 0, 0, 0.14);
+  }
+
+  .home-hub .navbar-custom #huxblog_navbar .navbar-nav,
+  .about-hub .navbar-custom #huxblog_navbar .navbar-nav {
+    margin: 6px 0;
+  }
+
+  .home-hub .navbar-custom #huxblog_navbar .nav li a,
+  .about-hub .navbar-custom #huxblog_navbar .nav li a {
+    height: 40px;
+    min-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-minimal.home-hub .navbar-custom .nav li.active > a,
+  .header-minimal.home-hub .navbar-custom .nav li.active > a:hover,
+  .header-minimal.home-hub .navbar-custom .nav li.active > a:focus,
+  .header-minimal.about-hub .navbar-custom .nav li.active > a,
+  .header-minimal.about-hub .navbar-custom .nav li.active > a:hover,
+  .header-minimal.about-hub .navbar-custom .nav li.active > a:focus {
+    box-shadow: inset -2px 0 0 #5D3B67;
+  }
 }
