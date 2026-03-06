@@ -1,25 +1,40 @@
 ---
-layout: default
-description: "你来到了没有知识的荒原 🙊"
-header-img: "img/404-bg.jpg"
+layout: page
+title: "404"
+description: "Page not found."
 permalink: /404.html
+header-style: minimal
+hide-header: true
+sidebar: false
+body-class: home-hub
 ---
 
+<section class="home-section">
+    <div class="hub-with-nav">
+        <div class="hub-main">
+            <section class="home-time-group" id="error-404" data-spy-section>
+                <h2 class="home-section-title">404</h2>
+                <article class="home-post-card" style="cursor: default;">
+                    <div class="home-post-head">
+                        <h3 class="home-post-title">Page Not Found</h3>
+                        <p class="home-post-date">Error</p>
+                    </div>
+                    <p class="home-post-excerpt">The page you are looking for does not exist, may have moved, or the URL is incorrect.</p>
+                    <div class="home-post-tags">
+                        <a class="home-post-tag" href="{{ site.baseurl }}/">Back to Home</a>
+                        <a class="home-post-tag" href="{{ site.baseurl }}/tags/">Browse Tags</a>
+                    </div>
+                </article>
+            </section>
+        </div>
 
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-				<div class="site-heading" id="tag-heading">
-					<h1>404</h1>
-					<span class="subheading">{{ page.description }}</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-
-<script>
-	document.body.classList.add('page-fullscreen');
-</script>
+        <aside class="hub-side-nav" aria-label="404 navigation">
+            <h3 class="hub-side-title">Navigation</h3>
+            <ul class="hub-side-list">
+                <li><a href="{{ site.baseurl }}/">Home</a></li>
+                <li><a href="{{ site.baseurl }}/about/">About</a></li>
+                <li><a href="{{ site.baseurl }}/tags/">Tags</a></li>
+            </ul>
+        </aside>
+    </div>
+</section>

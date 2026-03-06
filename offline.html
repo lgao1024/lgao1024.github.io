@@ -1,25 +1,40 @@
 ---
-layout: default
-description: "网络似乎出现了问题 😥"
-header-img: "img/404-bg.jpg"
+layout: page
+title: "Offline"
+description: "You are currently offline."
 permalink: /offline.html
+header-style: minimal
+hide-header: true
+sidebar: false
+body-class: home-hub
 ---
 
+<section class="home-section">
+    <div class="hub-with-nav">
+        <div class="hub-main">
+            <section class="home-time-group" id="offline-info" data-spy-section>
+                <h2 class="home-section-title">Offline</h2>
+                <article class="home-post-card" style="cursor: default;">
+                    <div class="home-post-head">
+                        <h3 class="home-post-title">Network Connection Lost</h3>
+                        <p class="home-post-date">Status</p>
+                    </div>
+                    <p class="home-post-excerpt">The network appears to be unavailable. Please check your connection and try again.</p>
+                    <div class="home-post-tags">
+                        <a class="home-post-tag" href="javascript:location.reload()">Retry</a>
+                        <a class="home-post-tag" href="{{ site.baseurl }}/">Back to Home</a>
+                    </div>
+                </article>
+            </section>
+        </div>
 
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-				<div class="site-heading" id="tag-heading">
-					<h1>Offline</h1>
-					<span class="subheading">{{ page.description }}</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-
-<script>
-	document.body.classList.add('page-fullscreen');
-</script>
+        <aside class="hub-side-nav" aria-label="Offline navigation">
+            <h3 class="hub-side-title">Navigation</h3>
+            <ul class="hub-side-list">
+                <li><a href="{{ site.baseurl }}/">Home</a></li>
+                <li><a href="{{ site.baseurl }}/about/">About</a></li>
+                <li><a href="{{ site.baseurl }}/tags/">Tags</a></li>
+            </ul>
+        </aside>
+    </div>
+</section>
