@@ -1836,32 +1836,30 @@ a:focus {
   .home-hub .navbar-custom .navbar-header,
   .about-hub .navbar-custom .navbar-header {
     min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: relative;
   }
 
   .home-hub .navbar-custom .navbar-brand,
   .about-hub .navbar-custom .navbar-brand {
+    float: left;
     height: 44px;
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    line-height: 1;
+    line-height: 44px;
     font-size: 20px;
   }
 
   .home-hub .navbar-default .navbar-toggle,
   .about-hub .navbar-default .navbar-toggle {
-    margin: 0;
+    float: right;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 0;
+    margin-right: 0;
     width: 40px;
     height: 40px;
     padding: 10px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .home-hub .navbar-default .navbar-toggle .icon-bar,
@@ -1879,17 +1877,24 @@ a:focus {
 
   .home-hub .navbar-custom #huxblog_navbar .navbar-nav,
   .about-hub .navbar-custom #huxblog_navbar .navbar-nav {
-    margin: 6px 0;
+    margin: 0;
+  }
+
+  .home-hub .navbar-custom #huxblog_navbar .nav li,
+  .about-hub .navbar-custom #huxblog_navbar .nav li {
+    margin: 0;
   }
 
   .home-hub .navbar-custom #huxblog_navbar .nav li a,
   .about-hub .navbar-custom #huxblog_navbar .nav li a {
     height: 40px;
     min-height: 40px;
-    padding: 0 10px;
+    width: 100%;
+    padding: 0;
     font-size: 14px;
     justify-content: center;
     text-align: center;
+    border-radius: 0;
   }
 
   .header-minimal.home-hub .navbar-custom .nav li.active > a,
