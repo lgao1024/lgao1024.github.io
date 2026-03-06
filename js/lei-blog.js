@@ -47,25 +47,23 @@ jQuery(document).ready(function($) {
     var $navbar = $('.header-minimal .navbar-custom');
     $navbar.addClass('is-fixed');
 
-    // On desktop:
-    // content moves up (scroll down) -> hide navbar
-    // content moves down (scroll up) -> show navbar
-    if ($navbar.length && $(window).width() >= 768) {
+    // Scroll behavior for both desktop and mobile:
+    // scroll down -> hide navbar, scroll up -> show navbar.
+    if ($navbar.length) {
         var lastTop = $(window).scrollTop();
-        var userScrollUntil = 0;
-
-        function markUserScroll() {
-            userScrollUntil = Date.now() + 220;
-        }
-
-        window.addEventListener('wheel', markUserScroll, { passive: true });
-        window.addEventListener('touchmove', markUserScroll, { passive: true });
 
         $(window).on('scroll', function() {
             var currentTop = $(window).scrollTop();
-            if (Date.now() > userScrollUntil) return;
+            var navOpen = $('#huxblog_navbar').hasClass('in');
 
             if (Math.abs(currentTop - lastTop) < 2) return;
+
+            // Keep navbar visible while mobile menu is expanded.
+            if (navOpen) {
+                $navbar.removeClass('nav-slide-hidden');
+                lastTop = currentTop;
+                return;
+            }
 
             if (currentTop <= 0 || currentTop < lastTop) {
                 $navbar.removeClass('nav-slide-hidden');
