@@ -1619,17 +1619,15 @@ a:focus {
 .about-hub .postlist-container {
   padding-top: 34px;
 }
+.about-section {
+  margin-bottom: 18px;
+}
 .about-block {
   border: 1px solid #d8dee5;
   border-radius: 10px;
   padding: 22px 24px;
-  margin-bottom: 18px;
+  margin-bottom: 0;
   background: #fff;
-}
-.about-block h2 {
-  font-size: 28px;
-  margin-top: 0;
-  margin-bottom: 10px;
 }
 .about-avatar {
   width: 140px;
