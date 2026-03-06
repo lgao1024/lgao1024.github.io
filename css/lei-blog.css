@@ -245,8 +245,20 @@ pre code {
 .post-container h6 {
   margin: 30px 0 10px;
 }
+.post-container h1 {
+  font-size: 30px;
+}
+.post-container h2 {
+  font-size: 25px;
+}
+.post-container h3 {
+  font-size: 21px;
+}
+.post-container h4 {
+  font-size: 18px;
+}
 .post-container h5 {
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 600;
   color: gray;
 }
@@ -254,7 +266,7 @@ pre code {
   margin-top: 5px;
 }
 .post-container h6 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: gray;
 }
@@ -1392,6 +1404,17 @@ a:focus {
   border-color: #C6B3CD;
   background: rgba(138, 92, 153, 0.1);
   transform: translateY(1px);
+}
+.home-post-card-static {
+  cursor: default;
+}
+.home-post-card-static:hover,
+.home-post-card-static:focus,
+.home-post-card-static:active {
+  border-color: #d8dee5;
+  background: #fff;
+  box-shadow: none;
+  transform: none;
 }
 .post-detail-section .postlist-container {
   margin-bottom: 0;

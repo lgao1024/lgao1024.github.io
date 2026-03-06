@@ -52,20 +52,6 @@ hide-header: true
             </section>
             {% endif %}
 
-            {% if site.featured-tags %}
-            <section class="about-section" id="popular-tags" data-spy-section>
-                <h2 class="home-section-title">Popular Tags</h2>
-                <div class="about-block">
-                    <div class="home-tag-list">
-                        {% for tag in site.tags %}
-                            {% if tag[1].size > site.featured-condition-size %}
-                            <a class="home-tag" href="{{ site.baseurl }}/tags/#{{ tag[0] | slugify }}"># {{ tag[0] }}</a>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-            </section>
-            {% endif %}
         </div>
 
         <aside class="hub-side-nav" aria-label="About navigation">
@@ -75,9 +61,6 @@ hide-header: true
                 <li><a href="#contact" data-spy-link>Contact</a></li>
                 {% if site.friends %}
                 <li><a href="#related-links" data-spy-link>Related Links</a></li>
-                {% endif %}
-                {% if site.featured-tags %}
-                <li><a href="#popular-tags" data-spy-link>Popular Tags</a></li>
                 {% endif %}
             </ul>
         </aside>
