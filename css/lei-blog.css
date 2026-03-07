@@ -246,13 +246,15 @@ pre code {
   margin: 30px 0 10px;
 }
 .post-container h1 {
-  font-size: 30px;
+  font-size: 28px;
 }
 .post-container h2 {
-  font-size: 25px;
+  font-size: 22px;
 }
 .post-container h3 {
-  font-size: 21px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
 }
 .post-container h4 {
   font-size: 18px;
@@ -1448,7 +1450,7 @@ a:focus {
   font-size: inherit;
 }
 .post-detail-title {
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1.2;
   color: #1f1f1f;
 }
@@ -1456,6 +1458,15 @@ a:focus {
   margin-top: 14px;
   padding-left: 0;
   padding-right: 0;
+}
+.post-detail-content > p:first-of-type {
+  margin-top: 4px;
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border-left: 4px solid #8A5C99;
+  border-radius: 8px;
+  background: #f6f8fb;
+  color: #4e5964;
 }
 .post-detail-content p {
   margin: 14px 0;
@@ -1588,6 +1599,10 @@ a:focus {
   line-height: 1.25;
   margin: 0;
 }
+.home-post-title.post-detail-title {
+  font-size: 28px;
+  line-height: 1.2;
+}
 .home-post-title a {
   color: #1f1f1f;
   text-decoration: none;
@@ -1702,6 +1717,9 @@ a:focus {
   }
   .home-post-title {
     font-size: 19px;
+  }
+  .home-post-title.post-detail-title {
+    font-size: 24px;
   }
   .home-post-head {
     flex-direction: column;
