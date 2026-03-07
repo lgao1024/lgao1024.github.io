@@ -252,9 +252,9 @@ pre code {
   font-size: 22px;
 }
 .post-container h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 .post-container h4 {
   font-size: 18px;
@@ -1459,15 +1459,6 @@ a:focus {
   padding-left: 0;
   padding-right: 0;
 }
-.post-detail-content > p:first-of-type {
-  margin-top: 4px;
-  margin-bottom: 18px;
-  padding: 12px 14px;
-  border-left: 4px solid #8A5C99;
-  border-radius: 8px;
-  background: #f6f8fb;
-  color: #4e5964;
-}
 .post-detail-content p {
   margin: 14px 0;
 }
@@ -1602,6 +1593,17 @@ a:focus {
 .home-post-title.post-detail-title {
   font-size: 28px;
   line-height: 1.2;
+}
+.post-detail-card > .home-post-subtitle {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  border-left: 3px solid #8A5C99;
+  border-radius: 6px;
+  background: #f6f8fb;
+  color: #5b6570;
+  font-size: 16px;
+  line-height: 1.65;
 }
 .home-post-title a {
   color: #1f1f1f;
