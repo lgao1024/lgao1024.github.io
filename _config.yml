@@ -103,4 +103,4 @@ theme: butterfly
 deploy:
   type: git
   repo: https://github.com/lgao1024/lgao1024.github.io.git
-  branch: deploy
+  branch: main
