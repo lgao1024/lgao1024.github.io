@@ -14,3 +14,8 @@ social:
   GitHub: https://github.com/你的用户名  # GitHub链接
   微博: https://weibo.com/你的用户名     # 微博链接
   知乎: https://www.zhihu.com/people/你的用户名  # 知乎链接
+
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: false
