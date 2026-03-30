@@ -5,7 +5,7 @@
 # Site
 title: Lei's Blog
 subtitle: ''
-description: 'Lei's blog'
+description: Lei's blog
 keywords:
 author: Lei Gao
 language: zh-CN
@@ -103,4 +103,4 @@ theme: butterfly
 deploy:
   type: git
   repo: https://github.com/lgao1024/lgao1024.github.io.git
-  branch: main
+  branch: gh-pages
